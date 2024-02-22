@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "containerNames":{
+      "value": [
+        "audit",
+        "logs",
+        "error",
+        "success"
+      ]
+    },
+    "storageAccountName": {
+      "value": "azurebiceplearnerdev"
+    },
+    "storageAccountKind": {
+      "value": "StorageV2"
+    },
+    "skuName": {
+      "value": "Standard_LRS"
+    },
+    "isSftpEnabled": {
+      "value": true
+    },
+    "accessTier": {
+      "value": "Hot"
+    },
+    "teamName": {
+      "value": "CloudOps"
+    },
+    "ownerOfResource": {
+      "value": "Divyansh Jaiswal"
+    },
+    "Department": {
+      "value": "IT Infrastructure"
+    },
+    "sftpStorageAccountName": {
+      "value": "sftpbiceplearner"
+    },
+    "appInsightName":{
+      "value": "biceplearnerinsight"
+    },
+    "appInsightKind":{
+      "value": "web"
+    },
+    "appServicePlanName":{
+      "value": "biceplearnerappplanb"
+    },
+    "appPlanSkuName":{
+      "value": "B1"
+    },
+    "functionAppName":{
+      "value": "bicepfunctionApp"
+    }
+  }
+}

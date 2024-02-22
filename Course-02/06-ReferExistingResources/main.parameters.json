@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "nameoftheContainers": {
+      "value": [
+        "audit",
+        "logs",
+        "errors",
+        "success"
+      ]
+    },
+    "location": {
+      "value": "canadacentral"
+    },
+    "ownerOfTheResource": {
+      "value": "Divyansh Jaiswal"
+    },
+    "skuName": {
+      "value": "Premium_LRS"
+    },
+    "storageKind": {
+      "value": "StorageV2"
+    },
+    "storageName": {
+      "value": "divyanshsa8980989"
+    },
+    "teamName": {
+      "value": "CloudOps"
+    },
+    "appServiceName": {
+      "value": "bicepLearnerwebapp"
+    }
+  }
+}

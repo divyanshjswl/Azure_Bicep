@@ -1,0 +1,42 @@
+- To convert the bicep file into json format
+az bicep build --file main.bicep
+
+- Decompile json file into bicep format
+az bicep decompile --file file_name.json
+
+- Create Resource group in Azure
+az group create --location your_location --name name_of_resouce_group
+                       OR
+az group create --location canadacentral --name AzureBicepLearner --tags "Team=CloudOps"
+
+- Delete Resource group in Azure
+az group delete --name AzureBicepLearner
+
+- Deploy bicep template
+az deployment group create \
+    --subscription subscription_name \
+    --resourcegroup rg_name \
+    --name name_of_deployment \
+    --mode complete \
+    --template-file main.bicep \
+    --parametes @main.parameters.json
+             OR
+az deployment group create --name NameOfDeployment --resource-group RgName --template-file main.bicep --parameters main.parameters.json
+
+
+- To dryrun the deployment of bicep template and this is  TERRAFORM PLAN in Azure Bicep.
+az deployment group create --name NameOfDeployment --resource-group RgName --template-file main.bicep --parameters main.parameters.json --what-if
+
+
+
+
+
+***********************************************************Important Notes*********************************************************************
+
+1. For Existing resources always use Advanced loop 
+2. Ternanry operators are used for If else condition
+3. Conditional operators are where if is true then only deploy the resource
+4. dependsOn, parent are used for dependent resources. Optionally we can use outputs defined in the resource for dependency
+5. ARM ttk, validation phase in Azure DevOps pileline YAML file, --what-if, azure bicep build is used for the validation of the code.
+6. Array = Key && object = KeyValue Pair
+7. Loops in bicep is used to create mltiple resources based on names (ex: for containernames in containernames)

@@ -1,0 +1,30 @@
+- Create resource group in Azure
+  az group create -g AzureBicepLearner -l canadacentral --tags "Team=CloudOps"
+
+- Create Deployment in Azure usin Bicep file
+  az deployment group create -g AzureBicepLearner -f main.bicep
+
+
+- Delete Resource group 
+  az group delete --name AzureBicepLearner
+
+  - Create Azure Service Priciple
+    az ad sp create-for-rbac --name "NameOfSp" --role contributor --scopes /subscriptions/YourSubscriptionID
+
+
+
+
+***********************Azure CREDENTIALS*************************************************************************************
+
+{
+    "clientId": "YourAppId",
+    "clientSecret": "YourAppPassword",
+    "subscriptionId": "YourSubscriptionId",
+    "tenantId": "YourTenantId",
+    "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+    "resourceManagerEndpointUrl": "https://management.azure.com/",
+    "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+    "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+    "galleryEndpointUrl": "https://gallery.azure.com/",
+    "managementEndpointUrl": "https://management.core.windows.net/"
+  }

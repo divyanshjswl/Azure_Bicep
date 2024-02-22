@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "canadacentral"
+    },
+    "storageAccountName": {
+      "value": "biceplearnerdevxyz"
+    },
+    "loggingstorageAccountName": {
+      "value": "biceplearnerloggingdev"
+    },
+    "storageAccountSku": {
+      "value": "Standard_LRS"
+    },
+    "minimumTlsVersion": {
+      "value": "TLS1_2"
+    },
+    "supportsHttpsTrafficOnly": {
+      "value": true
+    },
+    "commontags" :{
+      "value": {
+        "Owner": "Divyansh Jaiswal",
+        "Department": "IT Infrastructure",
+        "Team": "CloudOps"
+      }
+    }
+  }
+}
