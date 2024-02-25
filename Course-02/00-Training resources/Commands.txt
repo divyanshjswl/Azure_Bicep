@@ -40,3 +40,9 @@ az deployment group create --name NameOfDeployment --resource-group RgName --tem
 5. ARM ttk, validation phase in Azure DevOps pileline YAML file, --what-if, azure bicep build is used for the validation of the code.
 6. Array = Key && object = KeyValue Pair
 7. Loops in bicep is used to create mltiple resources based on names (ex: for containernames in containernames)
+
+***************************************************** FOR AZURE DEVOPS IAC DEPLOYMENT USE THIS VIDEO***********************************************
+
+Youtube: https://www.youtube.com/watch?v=670HJla6p_s
+Github: https://github.com/divyanshjswl/AzureBicepPipelineIACDeployment
+
